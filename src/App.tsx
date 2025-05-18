@@ -5,6 +5,7 @@ import IntroSection from './components/IntroSection';
 import FeatureSection from './components/FeatureSection';
 import TokenSection from './components/TokenSection';
 import ContactSection from './components/ContactSection';
+import PredictionMarketsPage from './components/PredictionMarketsPage';
 import Footer from './components/Footer';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <HeroSection />
         <IntroSection />
         <FeatureSection />
+        <PredictionMarketsPage />
         <TokenSection />
         <ContactSection />
       </main>
@@ -22,5 +24,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

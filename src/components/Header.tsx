@@ -29,6 +29,7 @@ const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           <a href="#features" className="text-sm font-medium hover:text-[#E10600] transition-colors">Features</a>
+          <a href="#markets" className="text-sm font-medium hover:text-[#E10600] transition-colors">Markets</a>
           <a href="#token" className="text-sm font-medium hover:text-[#E10600] transition-colors">$ZONE Token</a>
           <a href="#contact" className="text-sm font-medium hover:text-[#E10600] transition-colors">Early Access</a>
         </nav>
@@ -52,6 +53,13 @@ const Header: React.FC = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Features
+            </a>
+            <a 
+              href="#markets" 
+              className="text-sm font-medium p-2 hover:bg-zinc-700 rounded"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Markets
             </a>
             <a 
               href="#token" 
