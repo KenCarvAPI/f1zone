@@ -47,6 +47,12 @@ const HeroSection: React.FC = () => {
             Explore F1 Zone
           </a>
           <a 
+            href="#markets" 
+            className="bg-[#0090D0] hover:bg-[#00a0e6] text-white font-medium py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-blue-500/20 text-center min-w-[180px]"
+          >
+            View Markets
+          </a>
+          <a 
             href="#contact" 
             className="bg-transparent border-2 border-white hover:border-[#E10600] text-white hover:text-[#E10600] font-medium py-3 px-8 rounded-md transition-all text-center min-w-[180px]"
           >
