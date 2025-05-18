@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Trophy, Calendar, TrendingUp, ExternalLink, AlertCircle } from 'lucide-react';
-import { formatEther } from 'ethers/lib/utils';
-import { useWeb3React } from '@web3-react/core';
-import { ClobClient } from '@polymarket/clob-client';
 
 interface Market {
   id: string;
@@ -19,19 +16,11 @@ const PredictionMarketsPage: React.FC = () => {
   const [markets, setMarkets] = useState<Market[]>([]);
   const [activeCategory, setActiveCategory] = useState<'championship' | 'race' | 'entertainment'>('championship');
   const [isLoading, setIsLoading] = useState(true);
-  const { account } = useWeb3React();
 
   useEffect(() => {
     const fetchMarkets = async () => {
       try {
-        // Initialize Polymarket CLOB client
-        const client = new ClobClient({
-          networkId: 137, // Polygon Mainnet
-          baseUrl: 'https://clob.polymarket.com',
-        });
-
-        // Fetch markets data
-        // This is a placeholder - you'll need to implement actual Polymarket API calls
+        // Simulated market data
         const mockMarkets: Market[] = [
           {
             id: '1',
@@ -178,17 +167,15 @@ const PredictionMarketsPage: React.FC = () => {
           </div>
         )}
 
-        {!account && (
-          <div className="mt-12 bg-zinc-800 p-6 rounded-xl max-w-2xl mx-auto">
-            <div className="flex items-center space-x-3 text-[#FFF200]">
-              <AlertCircle className="h-5 w-5" />
-              <h4 className="font-semibold">Connect Wallet to Trade</h4>
-            </div>
-            <p className="mt-2 text-gray-300">
-              Connect your Web3 wallet to start trading on Polymarket. Make sure you're on the Polygon network.
-            </p>
+        <div className="mt-12 bg-zinc-800 p-6 rounded-xl max-w-2xl mx-auto">
+          <div className="flex items-center space-x-3 text-[#FFF200]">
+            <AlertCircle className="h-5 w-5" />
+            <h4 className="font-semibold">Connect Wallet to Trade</h4>
           </div>
-        )}
+          <p className="mt-2 text-gray-300">
+            Connect your Web3 wallet to start trading on Polymarket. Make sure you're on the Polygon network.
+          </p>
+        </div>
       </div>
     </section>
   );
