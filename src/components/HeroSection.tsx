@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
   const [offset, setOffset] = useState(0);
@@ -40,24 +41,24 @@ const HeroSection: React.FC = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a 
-            href="#features" 
+          <Link 
+            to="#features" 
             className="bg-[#E10600] hover:bg-[#ff0800] text-white font-medium py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-red-500/20 text-center min-w-[180px]"
           >
             Explore F1 Zone
-          </a>
-          <a 
-            href="#markets" 
+          </Link>
+          <Link 
+            to="/markets" 
             className="bg-[#0090D0] hover:bg-[#00a0e6] text-white font-medium py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-blue-500/20 text-center min-w-[180px]"
           >
             View Markets
-          </a>
-          <a 
-            href="#contact" 
+          </Link>
+          <Link 
+            to="#contact" 
             className="bg-transparent border-2 border-white hover:border-[#E10600] text-white hover:text-[#E10600] font-medium py-3 px-8 rounded-md transition-all text-center min-w-[180px]"
           >
             Join the Race
-          </a>
+          </Link>
         </div>
       </div>
       
